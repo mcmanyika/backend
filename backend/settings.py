@@ -26,10 +26,10 @@ SECRET_KEY = '-jl58svk+mu@^94)6)h7%1nut!=mk0ps*im@osjhcy-$&!%4x2'
 DEBUG = True
 
 if DEBUG:
-    ALLOWED_HOSTS = ['127.0.0.1', '137.184.10.31']
+    ALLOWED_HOSTS = ['127.0.0.1', '143.198.159.204']
 else:
 
-    ALLOWED_HOSTS = ['137.184.10.31']
+    ALLOWED_HOSTS = ['143.198.159.204']
 
 
 # Application definition
