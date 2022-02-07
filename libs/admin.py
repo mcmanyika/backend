@@ -2,13 +2,6 @@ from django.contrib import admin
 from .models import *
 
 
-class TicketsAdmin(admin.ModelAdmin):
-    list_display = ('id', 'accountAddress')
-
-
-admin.site.register(DeployedTickets, TicketsAdmin)
-
-
 class AcctAttributesAdmin(admin.ModelAdmin):
     list_display = ('id', 'name', 'sponser', 'status')
 
