@@ -3,16 +3,6 @@ from django.db import models
 # Create your models here.
 
 
-class AcctAttributes(models.Model):
-    name = models.CharField(max_length=50)
-    sponser = models.CharField(max_length=50)
-    status = models.CharField(max_length=10, default='active')
-    timestamp = models.DateTimeField(auto_now_add=True, auto_now=False)
-
-    def _str_(self):
-        return self.name
-
-
 class Products(models.Model):
     title = models.CharField(max_length=200)
     description = models.TextField()

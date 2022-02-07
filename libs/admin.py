@@ -2,13 +2,6 @@ from django.contrib import admin
 from .models import *
 
 
-class AcctAttributesAdmin(admin.ModelAdmin):
-    list_display = ('id', 'name', 'sponser', 'status')
-
-
-admin.site.register(AcctAttributes, AcctAttributesAdmin)
-
-
 class ProductsAdmin(admin.ModelAdmin):
     list_display = ('id', 'title', 'category', 'moq', 'status')
 

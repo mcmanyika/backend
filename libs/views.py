@@ -9,25 +9,6 @@ from .serializers import *
 
 
 @api_view(['GET', 'POST'])
-def acct_attributes(request):
-    if request.method == 'GET':
-        data = AcctAttributes.objects.all()
-
-        serializer = AcctSerializer(
-            data, context={'request': request}, many=True)
-
-        return Response(serializer.data)
-
-    elif request.method == 'POST':
-        serializer = AcctSerializer(data=request.data)
-        if serializer.is_valid():
-            serializer.save()
-            return Response(status=status.HTTP_201_CREATED)
-
-        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
-
-
-@api_view(['GET', 'POST'])
 def product_list(request):
     if request.method == 'GET':
         data = Products.objects.all()

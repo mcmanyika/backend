@@ -2,12 +2,6 @@ from rest_framework import serializers
 from .models import *
 
 
-class AcctSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = AcctAttributes
-        fields = ('id', 'name', 'sponser', 'status')
-
-
 class ProductSerializer(serializers.ModelSerializer):
     class Meta:
         model = Products
