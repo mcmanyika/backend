@@ -99,8 +99,8 @@ else:
         'default': {
             'ENGINE': 'django.db.backends.postgresql_psycopg2',
             'NAME': 'bigboy',
-            'USER': 'dbAdmin',
-            'PASSWORD': 'bigBoy@2021',
+            'USER': 'admin',
+            'PASSWORD': 'futuregreat',
             'HOST': 'localhost',
             'PORT': '',
         }
