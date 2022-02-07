@@ -10,9 +10,9 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/2.2/ref/settings/
 """
 
+import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
-import os
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
@@ -26,7 +26,7 @@ SECRET_KEY = '-jl58svk+mu@^94)6)h7%1nut!=mk0ps*im@osjhcy-$&!%4x2'
 DEBUG = True
 
 if DEBUG:
-    ALLOWED_HOSTS = ['165.232.137.199',  '*']
+    ALLOWED_HOSTS = ['165.232.137.199', 'localhost', '*']
 else:
 
     ALLOWED_HOSTS = ['165.232.137.199', 'localhost']
@@ -144,7 +144,12 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, 'static', 'static_dirs'),
+
+)
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'static', 'media')
 MEDIA_URL = '/media/'
