@@ -26,10 +26,12 @@ SECRET_KEY = '-jl58svk+mu@^94)6)h7%1nut!=mk0ps*im@osjhcy-$&!%4x2'
 DEBUG = True
 
 if DEBUG:
-    ALLOWED_HOSTS = ['165.232.137.199', 'localhost', '*']
+    ALLOWED_HOSTS = ['165.232.137.199', 'paysell.cf',
+                     'www.paysell.cf', 'localhost', '*']
 else:
 
-    ALLOWED_HOSTS = ['165.232.137.199', 'localhost']
+    ALLOWED_HOSTS = ['165.232.137.199',
+                     'paysell.cf', 'www.paysell.cf', 'localhost']
 
 
 # Application definition
@@ -57,11 +59,13 @@ MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
 ]
 
-CORS_ORIGIN_WHITELIST = [
-    'http://localhost:3000',
-    '165.232.137.199',
-    'https://paysell-912a1.web.app/'
-]
+# CORS_ORIGIN_WHITELIST = [
+#     'http://localhost:3000',
+#     '165.232.137.199',
+#     'https://paysell-912a1.web.app/'
+# ]
+
+CORS_ORIGIN_ALLOW_ALL = True
 
 ROOT_URLCONF = 'backend.urls'
 
