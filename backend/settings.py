@@ -26,12 +26,12 @@ SECRET_KEY = '-jl58svk+mu@^94)6)h7%1nut!=mk0ps*im@osjhcy-$&!%4x2'
 DEBUG = True
 
 if DEBUG:
-    ALLOWED_HOSTS = ['165.232.137.199', 'paysell.cf',
-                     'www.paysell.cf', 'localhost', '*']
+    ALLOWED_HOSTS = ['165.232.137.199', 'paysell.app',
+                     'www.paysell.app', 'localhost', '*']
 else:
 
     ALLOWED_HOSTS = ['165.232.137.199',
-                     'paysell.cf', 'www.paysell.cf', 'localhost']
+                     'paysell.app', 'www.paysell.app', 'localhost']
 
 
 # Application definition
