@@ -58,7 +58,8 @@ MIDDLEWARE = [
 ]
 
 CORS_ORIGIN_WHITELIST = [
-    'http://localhost:3000'
+    'http://localhost:3000',
+    'https://paysell-912a1.web.app/'
 ]
 
 ROOT_URLCONF = 'backend.urls'
