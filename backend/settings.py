@@ -59,6 +59,7 @@ MIDDLEWARE = [
 
 CORS_ORIGIN_WHITELIST = [
     'http://localhost:3000',
+    '165.232.137.199',
     'https://paysell-912a1.web.app/'
 ]
 
