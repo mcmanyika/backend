@@ -1,12 +1,4 @@
 from django.db import models
-from imagekit.models import ImageSpecField
-from imagekit.processors import ResizeToFill
-
-# Create your models here.
-
-
-def upload_location(instance, filename):
-    return "%s/%s" % (instance.id, filename)
 
 
 class Products(models.Model):
@@ -15,10 +7,6 @@ class Products(models.Model):
     price = models.CharField(max_length=50)
     category = models.CharField(max_length=50)
     image = models.ImageField(upload_to='product_images')
-    image_thumbnail = ImageSpecField(source='image',
-                                     processors=[ResizeToFill(100, 50)],
-                                     format='JPEG',
-                                     options={'quality': 60})
     moq = models.IntegerField()
     availability = models.CharField(max_length=20, default='Ready to ship')
     measurementType = models.CharField(max_length=20, default='Kilograms')
@@ -106,3 +94,15 @@ class SecondSubCategories(models.Model):
 
     def _str_(self):
         return self.name
+
+
+class account_profile(models.Model):
+    fname = models.CharField(max_length=50, default='')
+    lname = models.CharField(max_length=50, default='')
+    owner = models.CharField(
+        max_length=80, default='')
+    status = models.CharField(max_length=10, default="active")
+    timestamp = models.DateTimeField(auto_now_add=True, auto_now=False)
+
+    def _str_(self):
+        return self.fname

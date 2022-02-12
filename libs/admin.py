@@ -56,3 +56,10 @@ class ContactAdmin(admin.ModelAdmin):
 
 
 admin.site.register(contact_supplier, ContactAdmin)
+
+
+class ProfileAdmin(admin.ModelAdmin):
+    list_display = ('fname', 'lname',  'status')
+
+
+admin.site.register(account_profile, ProfileAdmin)

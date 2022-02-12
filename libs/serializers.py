@@ -50,3 +50,9 @@ class SecondSubCategorySerializer(serializers.ModelSerializer):
     class Meta:
         model = SecondSubCategories
         fields = ('rootid', 'name', 'status')
+
+
+class ProfileSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = account_profile
+        fields = ('fname', 'lname', 'owner', 'status')
