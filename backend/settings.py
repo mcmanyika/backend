@@ -23,14 +23,15 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '-jl58svk+mu@^94)6)h7%1nut!=mk0ps*im@osjhcy-$&!%4x2'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 if DEBUG:
     ALLOWED_HOSTS = ['165.232.137.199', 'paysell.app',
                      'www.paysell.app', 'localhost', '*']
 else:
 
-    ALLOWED_HOSTS = ['paysell.app', 'www.paysell.app' 'localhost']
+    ALLOWED_HOSTS = ['165.232.137.199', 'paysell.app',
+                     'www.paysell.app', 'localhost', '*']
 
 
 # Application definition
