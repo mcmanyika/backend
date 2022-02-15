@@ -7,8 +7,12 @@ from django.urls import path, re_path, include
 from lib import views
 from django.conf.urls import url
 
+# urlpatterns = [
+#     path('admin/', admin.site.urls),
+#     path('api/', include('lib.urls')),
+# ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', include('lib.urls')),
-]
-urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
