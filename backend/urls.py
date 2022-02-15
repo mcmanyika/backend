@@ -6,13 +6,11 @@ from django.contrib import admin
 from django.urls import path, re_path, include
 from lib import views
 from django.conf.urls import url
-
-# urlpatterns = [
-#     path('admin/', admin.site.urls),
-#     path('api/', include('lib.urls')),
-# ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+from django.views.static import serve as mediaserve
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', include('lib.urls')),
-] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+]
+urlpatterns.append(url(f'^{settings.MEDIA_URL.lstrip("/")}(?P<path>.*)$',
+                       mediaserve, {'document_root': settings.MEDIA_ROOT}))
