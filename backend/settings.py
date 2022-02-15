@@ -64,11 +64,11 @@ MIDDLEWARE = [
 #     'https://paysell-912a1.web.app/'
 # ]
 CORS_ORIGIN_ALLOW_ALL = True
-# CORS_ORIGIN_WHITELIST = [
-#     'http://localhost:3000',
-#     'https://paysell.io',
-#     'https://www.paysell.io'
-# ]
+CORS_ORIGIN_WHITELIST = [
+    'http://localhost:3000',
+    'https://paysell.io',
+    'https://www.paysell.io'
+]
 
 ROOT_URLCONF = 'backend.urls'
 
