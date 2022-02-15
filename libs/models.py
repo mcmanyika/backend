@@ -34,8 +34,10 @@ class contact_supplier(models.Model):
     title = models.CharField(max_length=200)
     description = models.CharField(max_length=800)
     quantity = models.IntegerField()
+    client = models.CharField(
+        max_length=80, default='')
     owner = models.CharField(
-        max_length=80, default='0xF0bA39D4eC7B977e6A47aA00165020C1DFD15226')
+        max_length=80, default='')
     status = models.CharField(max_length=10, default="active")
     timestamp = models.DateTimeField(auto_now_add=True, auto_now=False)
 

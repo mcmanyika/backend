@@ -1,7 +1,12 @@
-from django.urls import path
+from django.urls import path, include
+from rest_framework import routers
 from . import views
+from .views import ProfileViewSet
 
+router = routers.DefaultRouter()
+router.register(r'profile', ProfileViewSet)
 urlpatterns = [
+    path('update/', include(router.urls)),
     path('products/', views.product_list, name='product_list'),
     path('images/', views.images, name='images'),
     path('urls/', views.url_list, name='url_list'),
@@ -12,5 +17,5 @@ urlpatterns = [
          name='second_subcategories'),
     path('imagesList/', views.ImageView.as_view(), name='images_list'),
     path('contact_supplier/', views.supplier_contact, name='contact_supplier'),
-    path('profile/', views.acct_profile, name='profile'),
+    path('add_profile/', views.acct_profile, name='add_profile'),
 ]

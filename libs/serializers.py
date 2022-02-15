@@ -19,7 +19,7 @@ class ContactSerializer(serializers.ModelSerializer):
     class Meta:
         model = contact_supplier
         fields = ("rootid", "title", 'description',
-                  'quantity', 'owner', "status")
+                  'quantity', 'client', 'owner', "status")
 
 
 class UrlSerializer(serializers.ModelSerializer):
@@ -55,4 +55,4 @@ class SecondSubCategorySerializer(serializers.ModelSerializer):
 class ProfileSerializer(serializers.ModelSerializer):
     class Meta:
         model = account_profile
-        fields = ('fname', 'lname', 'owner', 'status')
+        fields = '__all__'
