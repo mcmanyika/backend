@@ -30,7 +30,7 @@ if DEBUG:
                      'www.paysell.app', 'localhost', '*']
 else:
 
-    ALLOWED_HOSTS = ['paysell.app', 'www.paysell.app']
+    ALLOWED_HOSTS = ['paysell.app', 'www.paysell.app' 'localhost']
 
 
 # Application definition
