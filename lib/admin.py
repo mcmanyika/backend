@@ -59,7 +59,7 @@ admin.site.register(contact_supplier, ContactAdmin)
 
 
 class ProfileAdmin(admin.ModelAdmin):
-    list_display = ('fname', 'lname',  'status')
+    list_display = ('fname', 'lname', 'email',  'status')
 
 
 admin.site.register(account_profile, ProfileAdmin)

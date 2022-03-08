@@ -101,6 +101,8 @@ class SecondSubCategories(models.Model):
 class account_profile(models.Model):
     fname = models.CharField(max_length=50, default='')
     lname = models.CharField(max_length=50, default='')
+    mobile = models.CharField(max_length=25, default='')
+    email = models.EmailField(default='')
     owner = models.CharField(
         max_length=80, default='')
     status = models.CharField(max_length=10, default="active")
