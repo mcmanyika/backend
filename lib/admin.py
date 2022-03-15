@@ -63,10 +63,3 @@ class ProfileAdmin(admin.ModelAdmin):
 
 
 admin.site.register(account_profile, ProfileAdmin)
-
-
-class ProfileAdmin(admin.ModelAdmin):
-    list_display = ('fname', 'lname', 'email',  'status')
-
-
-admin.site.register(accnt_profile, ProfileAdmin)
