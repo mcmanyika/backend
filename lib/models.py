@@ -112,3 +112,18 @@ class account_profile(models.Model):
 
     def _str_(self):
         return self.fname
+
+
+class accnt_profile(models.Model):
+    fname = models.CharField(max_length=50, default='')
+    lname = models.CharField(max_length=50, default='')
+    mobile = models.CharField(max_length=25, default='')
+    email = models.EmailField(default='')
+    owner = models.CharField(
+        max_length=80, default='')
+    verification = models.CharField(max_length=20, default="not verified")
+    status = models.CharField(max_length=10, default="active")
+    timestamp = models.DateTimeField(auto_now_add=True, auto_now=False)
+
+    def _str_(self):
+        return self.fname
