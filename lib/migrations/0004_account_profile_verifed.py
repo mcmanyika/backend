@@ -13,6 +13,6 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='account_profile',
             name='verifed',
-            field=models.CharField(default='not verifed', max_length=10),
+            field=models.CharField(default='', max_length=10),
         ),
     ]
