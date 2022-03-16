@@ -198,25 +198,6 @@ def acct_profile(request):
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 
-@api_view(['GET', 'POST'])
-def account_profile(request):
-    if request.method == 'GET':
-        data = account_profile.objects.all()
-
-        serializer = ProfileSerializer(
-            data, context={'request': request}, many=True)
-
-        return Response(serializer.data)
-
-    elif request.method == 'POST':
-        serializer = ProfileSerializer(data=request.data)
-        if serializer.is_valid():
-            serializer.save()
-            return Response(status=status.HTTP_201_CREATED)
-
-        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)        
-
-
 class ProfileViewSet(viewsets.ModelViewSet):
     queryset = account_profile.objects.all().order_by('-id')
     serializer_class = ProfileSerializer
