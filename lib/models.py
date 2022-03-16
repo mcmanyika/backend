@@ -105,6 +105,7 @@ class account_profile(models.Model):
     email = models.EmailField(default='')
     owner = models.CharField(
         max_length=80, default='')
+    verify = models.CharField(max_length=10, default="")
     status = models.CharField(max_length=10, default="active")
     timestamp = models.DateTimeField(auto_now_add=True, auto_now=False)
 
