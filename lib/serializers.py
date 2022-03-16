@@ -12,7 +12,7 @@ class ProductSerializer(serializers.ModelSerializer):
 class ImagesSerializer(serializers.ModelSerializer):
     class Meta:
         model = t_images
-        fields = ("rootid", "img", "status")
+        fields = ("id", "rootid", "img", "status")
 
 
 class ContactSerializer(serializers.ModelSerializer):
