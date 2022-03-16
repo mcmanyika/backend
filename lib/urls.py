@@ -17,5 +17,6 @@ urlpatterns = [
          name='second_subcategories'),
     path('imagesList/', views.ImageView.as_view(), name='images_list'),
     path('contact_supplier/', views.supplier_contact, name='contact_supplier'),
-    path('add_profile/', views.acct_profile, name='add_profile'),
+    path('add_profile/', views.acct_profile, name='add_profile'), 
+    path('account_profile/', views.acct_profile, name='account_profile'), 
 ]
