@@ -17,6 +17,6 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='account_profile',
             name='verification',
-            field=models.CharField(default='not verified', max_length=10),
+            field=models.CharField(default='', max_length=10),
         ),
     ]

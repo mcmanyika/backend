@@ -18,6 +18,6 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='account_profile',
             name='verification',
-            field=models.CharField(default='not verified', max_length=20),
+            field=models.CharField(default='', max_length=20),
         ),
     ]
