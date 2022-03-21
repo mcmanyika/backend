@@ -63,3 +63,10 @@ class ProfileAdmin(admin.ModelAdmin):
 
 
 admin.site.register(account_profile, ProfileAdmin)
+
+
+class BusinessAdmin(admin.ModelAdmin):
+    list_display = ('companyName', 'city', 'country',  'status')
+
+
+admin.site.register(t_business_info, BusinessAdmin)

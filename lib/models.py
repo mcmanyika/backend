@@ -111,3 +111,26 @@ class account_profile(models.Model):
 
     def _str_(self):
         return self.fname
+
+
+class t_business_info(models.Model):
+    rootid = models.ForeignKey(
+        account_profile, on_delete=models.CASCADE, default="")
+    companyName = models.CharField(max_length=50, default="")
+    address1 = models.CharField(max_length=50, default="")
+    address2 = models.CharField(max_length=50, default="")
+    postalCode = models.IntegerField()
+    city = models.CharField(max_length=30, default="")
+    country = models.CharField(max_length=50, default="Zimbabwe")
+    companyOwner = models.CharField(max_length=50, default="")
+    dob = models.CharField(max_length=10, default="")
+    idType = models.CharField(max_length=20, default="")
+    idCard = models.ImageField(upload_to='business_docs')
+    numberOfEmployees = models.CharField(max_length=50, default="")
+    registrationNumber = models.CharField(max_length=20, default="")
+    regCertificate = models.ImageField(upload_to='business_docs')
+    status = models.CharField(max_length=10, default="active")
+    timestamp = models.DateTimeField(auto_now_add=True, auto_now=False)
+
+    def _str_(self):
+        return self.companyName

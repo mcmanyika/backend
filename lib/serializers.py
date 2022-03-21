@@ -56,3 +56,9 @@ class ProfileSerializer(serializers.ModelSerializer):
     class Meta:
         model = account_profile
         fields = '__all__'
+
+
+class BusinessSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = t_business_info
+        fields = '__all__'
