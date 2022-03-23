@@ -70,3 +70,10 @@ class BusinessAdmin(admin.ModelAdmin):
 
 
 admin.site.register(t_business_info, BusinessAdmin)
+
+
+class FeedBackAdmin(admin.ModelAdmin):
+    list_display = ('rootid', 'rate',  'status')
+
+
+admin.site.register(Feedback, FeedBackAdmin)

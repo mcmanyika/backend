@@ -9,6 +9,12 @@ class ProductSerializer(serializers.ModelSerializer):
                   'image', 'moq', 'availability', 'measurementType', 'category', 'owner', 'status')
 
 
+class FeedBackSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Feedback
+        fields = '__all__'
+
+
 class ImagesSerializer(serializers.ModelSerializer):
     class Meta:
         model = t_images

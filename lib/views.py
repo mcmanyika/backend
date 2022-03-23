@@ -28,6 +28,25 @@ def product_list(request):
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 
+@api_view(['GET', 'POST'])
+def feedback(request):
+    if request.method == 'GET':
+        data = Feedback.objects.all()
+
+        serializer = FeedBackSerializer(
+            data, context={'request': request}, many=True)
+
+        return Response(serializer.data)
+
+    elif request.method == 'POST':
+        serializer = FeedBackSerializer(data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(status=status.HTTP_201_CREATED)
+
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+
 @api_view(["GET", "POST"])
 def images(request):
     if request.method == "GET":
