@@ -19,3 +19,10 @@ class ImagesSerializer(serializers.ModelSerializer):
     class Meta:
         model = t_images
         fields = ("rootid", "img", "status")
+
+
+class ContactSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = contact_supplier
+        fields = ("rootid", "title", 'description',
+                  'quantity', 'client', 'owner', "status")

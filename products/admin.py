@@ -21,3 +21,10 @@ class FeedBackAdmin(admin.ModelAdmin):
 
 
 admin.site.register(Feedback, FeedBackAdmin)
+
+
+class ContactAdmin(admin.ModelAdmin):
+    list_display = ('rootid', 'title', 'quantity',  'status')
+
+
+admin.site.register(contact_supplier, ContactAdmin)

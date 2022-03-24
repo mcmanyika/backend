@@ -85,3 +85,22 @@ class ImageView(APIView):
         else:
             print('error', imageList_serializer.errors)
             return Response(imageList_serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+
+@api_view(['GET', 'POST'])
+def supplier_contact(request):
+    if request.method == 'GET':
+        data = contact_supplier.objects.all()
+
+        serializer = ContactSerializer(
+            data, context={'request': request}, many=True)
+
+        return Response(serializer.data)
+
+    elif request.method == 'POST':
+        serializer = ContactSerializer(data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(status=status.HTTP_201_CREATED)
+
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)

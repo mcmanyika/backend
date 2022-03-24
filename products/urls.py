@@ -9,4 +9,5 @@ urlpatterns = [
     path('images/', views.images, name='images'),
     path('imagesList/', views.ImageView.as_view(), name='images_list'),
     path('feedback/', views.feedback, name='feedback'),
+    path('contact_supplier/', views.supplier_contact, name='contact_supplier'),
 ]

@@ -39,3 +39,19 @@ class t_images(models.Model):
 
     def _str_(self):
         return self.status
+
+
+class contact_supplier(models.Model):
+    rootid = models.ForeignKey(Products, on_delete=models.CASCADE, default="1")
+    title = models.CharField(max_length=200)
+    description = models.CharField(max_length=800)
+    quantity = models.IntegerField()
+    client = models.CharField(
+        max_length=80, default='')
+    owner = models.CharField(
+        max_length=80, default='')
+    status = models.CharField(max_length=10, default="active")
+    timestamp = models.DateTimeField(auto_now_add=True, auto_now=False)
+
+    def _str_(self):
+        return self.title

@@ -2,20 +2,6 @@ from django.contrib import admin
 from .models import *
 
 
-class ProductsAdmin(admin.ModelAdmin):
-    list_display = ('id', 'title', 'category', 'moq', 'status')
-
-
-admin.site.register(Products, ProductsAdmin)
-
-
-class ImagesAdmin(admin.ModelAdmin):
-    list_display = ("rootid", "status")
-
-
-admin.site.register(t_images, ImagesAdmin)
-
-
 class UrlsAdmin(admin.ModelAdmin):
     list_display = ('id', 'name', 'category', 'status')
 
@@ -51,13 +37,6 @@ class SecondSubCategoryAdmin(admin.ModelAdmin):
 admin.site.register(SecondSubCategories, SecondSubCategoryAdmin)
 
 
-class ContactAdmin(admin.ModelAdmin):
-    list_display = ('rootid', 'title', 'quantity',  'status')
-
-
-admin.site.register(contact_supplier, ContactAdmin)
-
-
 class ProfileAdmin(admin.ModelAdmin):
     list_display = ('fname', 'lname', 'email',  'status')
 
@@ -70,10 +49,3 @@ class BusinessAdmin(admin.ModelAdmin):
 
 
 admin.site.register(t_business_info, BusinessAdmin)
-
-
-class FeedBackAdmin(admin.ModelAdmin):
-    list_display = ('rootid', 'rate',  'status')
-
-
-admin.site.register(Feedback, FeedBackAdmin)
