@@ -78,6 +78,9 @@ class t_business_info(models.Model):
     city = models.CharField(max_length=30, default="")
     country = models.CharField(max_length=50, default="Zimbabwe")
     companyOwner = models.CharField(max_length=50, default="")
+    email = models.EmailField(default='')
+    owner = models.CharField(
+        max_length=80, default='')
     # dob = models.CharField(max_length=10, default="")
     # idType = models.CharField(max_length=20, default="")
     # idCard = models.ImageField(upload_to='business_docs')
