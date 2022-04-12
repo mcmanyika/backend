@@ -24,6 +24,7 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='t_business_info',
             name='rootid',
-            field=models.ForeignKey(default='', on_delete=django.db.models.deletion.CASCADE, to='lib.account_profile'),
+            field=models.ForeignKey(
+                default='1', on_delete=django.db.models.deletion.CASCADE, to='lib.account_profile'),
         ),
     ]
