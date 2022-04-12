@@ -20,11 +20,5 @@ class Migration(migrations.Migration):
             model_name='t_business_info',
             name='mobile',
             field=models.CharField(default='', max_length=25),
-        ),
-        migrations.AlterField(
-            model_name='t_business_info',
-            name='rootid',
-            field=models.ForeignKey(
-                default='1', on_delete=django.db.models.deletion.CASCADE, to='lib.account_profile'),
-        ),
+        )
     ]
