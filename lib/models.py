@@ -70,7 +70,8 @@ class account_profile(models.Model):
 
 
 class t_business_info(models.Model):
-    rootid = models.CharField(max_length=80, default="")
+    rootid = models.ForeignKey(
+        account_profile, on_delete=models.CASCADE, default="")
     companyName = models.CharField(max_length=50, default="")
     address1 = models.CharField(max_length=50, default="")
     address2 = models.CharField(max_length=50, default="")
@@ -78,6 +79,8 @@ class t_business_info(models.Model):
     city = models.CharField(max_length=30, default="")
     country = models.CharField(max_length=50, default="Zimbabwe")
     companyOwner = models.CharField(max_length=50, default="")
+    mobile = models.CharField(max_length=25, default='')
+    email = models.EmailField(default='')
     # dob = models.CharField(max_length=10, default="")
     # idType = models.CharField(max_length=20, default="")
     # idCard = models.ImageField(upload_to='business_docs')
