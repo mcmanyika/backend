@@ -70,8 +70,7 @@ class account_profile(models.Model):
 
 
 class t_business_info(models.Model):
-    rootid = models.ForeignKey(
-        account_profile, on_delete=models.CASCADE, default="")
+    rootid = models.CharField(max_length=80, default="")
     companyName = models.CharField(max_length=50, default="")
     address1 = models.CharField(max_length=50, default="")
     address2 = models.CharField(max_length=50, default="")
