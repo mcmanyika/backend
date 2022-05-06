@@ -104,3 +104,8 @@ def supplier_contact(request):
             return Response(status=status.HTTP_201_CREATED)
 
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+class ProductViewSet(viewsets.ModelViewSet):
+    queryset = Products.objects.all().order_by('-id')
+    serializer_class = ProductSerializer
+
